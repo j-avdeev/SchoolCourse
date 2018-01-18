@@ -1,0 +1,19 @@
+phpMyAdmin
+1. Скачать дистрибутив phpMyAdmin (https://www.phpmyadmin.net/), сохранить архив в /var/www/
+2. Распаковать архив в директорию /var/www/phpmyadmin
+
+Wordpress
+3. Скачать дистрибутив Wordpress (https://wordpress.org/download/), сохранить архив в /var/www/
+4. Распаковать архив в директорию /var/www/wordpress
+
+Создание Базы Данных для сайта
+5. Запустить браузер и перейти по адресу http://localhost/phpmyadmin
+6. Создать новую базу данных с названием - вашей фамилией, например, ivanov.
+
+Установка Wordpress
+7. В браузере перейдите по адресу http://localhost/wordpress
+8. Выполните указания по установке
+9.
+10. В браузере перейдите по адресу http://localhost и введите логин и пароль, указанный при установке Wordpress.
+11. Войдите в "админку" Wordpress, находящуюся по адресу http://localhost/wp-admin.php и попробуйте добавить новые страницы, записи на сайт.
+Посмотрите изменения на сайте http://localhost
