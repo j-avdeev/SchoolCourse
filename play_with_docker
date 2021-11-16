@@ -1,0 +1,81 @@
+Исходный текст туториала: https://docs.docker.com/samples/wordpress/
+
+Перейти на https://labs.play-with-docker.com/
+Залогиниться, содать учётную запись, если еще не создана.
+Add new instance
+
+Создать папку wordpress командой
+mkdir wordpress
+
+Перейти в папку wordpress командой
+cd wordpress
+
+Создать файл docker-compose.yml командой
+touch docker-compose.yml
+
+Открыть файл для редактирования командой
+vim docker-compose.yml
+
+Используй Ctrl+Insert Shift+Insert для Копирования и Вставки
+
+Вставить код:
+
+version: "3.9"
+   
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+    
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    volumes:
+      - wordpress_data:/var/www/html
+    ports:
+      - "8000:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+volumes:
+  db_data: {}
+  wordpress_data: {}
+
+Закрыть файл нажав Shift+z Shift+z
+
+
+Поправить номер версии в файле на 3.3
+
+Собрать проект командой
+docker-compose up -d
+
+Нажать Open port и набрать 8000
+
+Откроется окно установки Wordpress
+
+Выбрать язык, нажать Continue
+
+Заполнить Название сайта (Sitename), Имя пользователя (Username), Пароль (Password).
+В качестве e-mail можно использовать ненастоящий, например tt@tt.tt
+Важно сохранить предварительно Username и Password, т.к. они будут потом использоваться для входа на сайт.
+
+Нажимаем Submit.
+
+Логинимся с использованием логина/пароля.
+
+Открыта админка сайта Wordpress.
+
+Ткнуть в W в левом верхнем углу, чтобы посмотреть как выглядит сайт "снаружи".
+
+Необходимо создать пару страниц, найти как отредактировать меню, как добавить картинку.
