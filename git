@@ -1,0 +1,12 @@
+Скачать с репозитория файлы
+
+git clone https://github.com/j-avdeev/SchoolCourse
+
+Определить измененные файлы
+git add .
+
+Подготовить отправку изменений на сервер
+git commit
+
+Отправить изменения на сервер
+git push
