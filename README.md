@@ -10,5 +10,5 @@ https://www.coursera.org/
 
 https://www.edx.org/
 
-https://www.udacity.com/
+https://www.udacity.com/ (например, Intro to Machine Learning https://classroom.udacity.com/courses/ud120 )
 
