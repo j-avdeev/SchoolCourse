@@ -1,7 +1,18 @@
+Установить git-клиент
+
+https://git-scm.com/download/gui/windows
+
+
 Скачать с репозитория файлы
 
-git clone https://github.com/j-avdeev/SchoolCourse
+git clone https://gitlab.com/j.avdeev/cpp-test-project
 
+Поменять в файле helloworld.cpp что-либо в строке 
+"Hello World!"
+
+Посмотреть как изменится вывод runner
+
+------------------------------
 Определить измененные файлы
 git add .
 
@@ -10,3 +21,6 @@ git commit
 
 Отправить изменения на сервер
 git push
+
+
+
